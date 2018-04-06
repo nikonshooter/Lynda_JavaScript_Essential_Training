@@ -1,12 +1,14 @@
 const testWrapper = document.querySelector(".test-wrapper");
-const testArea = document.querySelector("#test-area")
+const testArea = document.querySelector("#test-area");
 const originText = document.querySelector("#origin-text p").innerHTML;
 const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
 
-timer = [0,0,0,0]
+var timer = [0,0,0,0];
 var interval;
 var timerRunning = false;
+
+// var house = 0;
 
 // Add leading zero to numbers 9 or below (purely for aesthetics):
 function leadingZero(time) {
@@ -31,7 +33,7 @@ function runTimer() {
 function spellCheck() {
     let textEntered = testArea.value;
     let originTextMatch = originText.substring(0,textEntered.length);
-    let textMatch;
+    // let textMatch;
 
     if (textEntered == originText) {
         clearInterval(interval);
@@ -53,7 +55,7 @@ function start() {
         timerRunning = true;
         interval = setInterval(runTimer, 10);
     }
-    console.log(textEnterdLength);
+    // console.log(textEnterdLength);
 }
 
 // Reset everything:
@@ -64,7 +66,7 @@ function reset() {
     timerRunning = false;
 
     testArea.value = "";
-    theTimer.innerHTML = '00:00:00';
+    theTimer.innerHTML = "00:00:00";
     testWrapper.style.borderColor = "grey";
 }
 

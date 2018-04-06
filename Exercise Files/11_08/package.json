@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "minifier": "^0.8.1"
+  },
+  "dependencies": {
+    "uglify-js": "^3.3.16"
   }
 }
